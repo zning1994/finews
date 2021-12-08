@@ -20,7 +20,7 @@ if __name__ == '__main__':
             f.write("""---
 layout: post
 title: \""""+i['title']+"""\"
-date: """+i['showtime']+"""
+date: """+i['showtime']+""" +0800
 categories: emnews
 tags: 东财滚动新闻
 ---
