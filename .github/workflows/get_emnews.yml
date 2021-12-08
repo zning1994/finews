@@ -1,6 +1,9 @@
 name: 'get_emnews'
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '1,6,11,16,21,26,31,36,41,46,51,56 * * * *'
 
