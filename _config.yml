@@ -10,3 +10,6 @@ timezone: Asia/Shanghai
 author: ZNing
 
 google_analytics: G-MTYH758FNF
+
+plugins:
+  - jekyll-feed
