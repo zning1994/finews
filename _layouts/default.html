@@ -11,8 +11,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
+    <script type="text/JavaScript">
+      function AutoRefresh( t ) {
+       setTimeout("location.reload(true);", t);
+      }
+    </script>
   </head>
-  <body>
+  <body onload="JavaScript:AutoRefresh(60000);">
     <div class="wrapper">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
