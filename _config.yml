@@ -1,10 +1,11 @@
 theme: jekyll-theme-minimal
 
+lang: zh-CN
 title: 金融新闻
 show_downloads: false
 safe: true
-url: https://finews.zning.me
-enforce_ssl: finews.zning.me
+url: https://finews.withounder.com
+enforce_ssl: finews.withounder.com
 timezone: Asia/Shanghai
 author: ZNing
 
