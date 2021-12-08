@@ -5,7 +5,7 @@ permalink: /emnews/
 ---
 
 {% for tag in site.tags %}
-  {% if tag[0] == "东财滚动新闻" %}
+  {% if tag[0] == '东财滚动新闻' %}
     <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
     <ul>
       {% for post in tag[1] limit:20 %}
