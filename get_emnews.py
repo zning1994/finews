@@ -17,8 +17,7 @@ if __name__ == '__main__':
     for i in result:
         # print(i['title'], i['digest'].split("】")[-1], i['id'], i['url_w'], i['showtime'], i['showtime'].split(" ")[0])
         with open("./_posts/"+str(i['showtime'].split(" ")[0])+"-"+str(i['id'])+".md", "w", encoding="utf-8") as f:
-            f.write("""
----
+            f.write("""---
 layout: post
 title: \""""+i['title']+"""\"
 date: """+i['showtime']+"""
