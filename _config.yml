@@ -1,1 +1,11 @@
 theme: jekyll-theme-minimal
+
+title: 金融新闻
+show_downloads: false
+safe: true
+url: https://finnews.zning.me
+enforce_ssl: finnews.zning.me
+timezone: Asia/Shanghai
+author: ZNing
+
+google_analytics: G-MTYH758FNF
