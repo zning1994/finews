@@ -13,3 +13,6 @@ google_analytics: G-MTYH758FNF
 
 plugins:
   - jekyll-feed
+
+feed:
+  posts_limit: 1000
