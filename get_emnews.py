@@ -25,5 +25,5 @@ categories: emnews
 tags: 东财滚动新闻
 ---
 
-"""+i['digest'].split("】")[-1]+"\n\n<"+i['url_w']+">\n\n[返回东财滚动新闻](//finews.withounder.com/emnews/)\n[返回首页](//finews.withounder.com/)")
+"""+i['digest'].split("】")[-1]+"\n\n<"+i['url_w']+">\n\n[返回东财滚动新闻](//finews.withounder.com/emnews/)｜[返回首页](//finews.withounder.com/)")
     # print(result)
