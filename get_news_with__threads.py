@@ -47,7 +47,7 @@ date: """+i['showtime']+""" +0800
 categories: """+pinyin+"""
 tags: """+i['from']+"""新闻
 ---
-"""+contents+"\n\n<http://choicewzp1.eastmoney.com/html_News/NewsShare.html?infoCode="+i['infocode']+">\n\n[返回"+i['from']+"新闻](//finews.withounder.com/"+pinyin+"/)｜[返回首页](//finews.withounder.com/)")
+"""+contents+"\n\n<http://choicewzp1.eastmoney.com/html_News/NewsShare.html?infoCode="+i['infocode']+">\n\n[返回"+i['from']+"新闻](//finews.withounder.com/category/"+pinyin+".html)｜[返回首页](//finews.withounder.com/)")
 
 def get_market_news(market_type_list):
     print("start get_market_news"+market_type_list[0])
@@ -67,7 +67,7 @@ date: """+i['datetime']+""" +0800
 categories: """+pinyin+"""
 tags: """+i['medianame']+"""新闻
 ---
-"""+contents+"\n\n<http://choicewzp1.eastmoney.com/html_News/NewsShare.html?infoCode="+i['infoCode']+">\n\n[返回"+i['medianame']+"新闻](//finews.withounder.com/"+pinyin+"/)｜[返回首页](//finews.withounder.com/)")
+"""+contents+"\n\n<http://choicewzp1.eastmoney.com/html_News/NewsShare.html?infoCode="+i['infoCode']+">\n\n[返回"+i['medianame']+"新闻](//finews.withounder.com/category/"+pinyin+".html)｜[返回首页](//finews.withounder.com/)")
 
 if __name__ == '__main__':
     t1 = threading.Thread(target=get_esnews, name='get_esnews')
