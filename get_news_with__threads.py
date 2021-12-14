@@ -70,7 +70,7 @@ tags: """+i['medianame']+"""新闻
 """+contents.replace("　　","")+"\n\n<http://choicewzp1.eastmoney.com/html_News/NewsShare.html?infoCode="+i['infoCode']+">\n\n[返回"+i['medianame']+"新闻](//finews.withounder.com/category/"+pinyin+".html)｜[返回首页](//finews.withounder.com/)")
 
 if __name__ == '__main__':
-    for i in range(0,3):
+    for i in range(0,5):
         t1 = threading.Thread(target=get_esnews, name='get_esnews')
         t1.start()
         t2 = threading.Thread(target=get_esnews_2, name='get_esnews_2')
