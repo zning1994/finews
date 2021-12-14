@@ -30,6 +30,9 @@ jobs:
 
     - name: Doing fetch and convert
       run: python get_news_with__threads.py
+
+    - name: Doing fetch and convert
+      run: python generate_category.py
       
     - name: Commit files
       run: |
