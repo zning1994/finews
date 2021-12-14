@@ -33,6 +33,9 @@ jobs:
 
     - name: Doing fetch and convert 2
       run: python get_emnews_2.py
+
+    - name: Doing fetch and convert 3
+      run: python get_market_news.py
       
     - name: Commit files
       run: |
