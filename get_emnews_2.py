@@ -12,7 +12,7 @@ def get_url(url):
 
 if __name__ == '__main__':
     p = Pinyin()
-    result = get_url("http://183.136.162.242/web/webapi?type=45&count=500&newsid=1")
+    result = get_url("http://183.136.162.242/web/webapi?type=45&count=100&newsid=1")
     result = json.loads(result)['nodeList']
     for i in result:
         pinyin = p.get_pinyin(i['from']).replace("-","")
