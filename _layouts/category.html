@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% for post in site.categories[page.category]  limit:1 %}
-<h2 id="{{ page.tags[0] }}">{{ page.tags[0] }}</h2>
+<h2 id="{{ post.tags[0] }}">{{ post.tags[0] }}</h2>
 {% endfor %}
 <ul>
   {% for post in site.categories[page.category] %}
