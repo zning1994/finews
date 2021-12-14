@@ -14,7 +14,7 @@ if __name__ == '__main__':
     p = Pinyin()
     market_type_list = ["37","38","39"]
     for mt in market_type_list:
-        result = get_url("http://43.240.125.15:1818/information/newmarket/web/webapi?marketType="+mt+"&count=500")
+        result = get_url("http://43.240.125.15:1818/information/newmarket/web/webapi?marketType="+mt+"&count=100")
         result = json.loads(result)['record']
         for i in result:
             pinyin = p.get_pinyin(i['medianame']).replace("-","")
