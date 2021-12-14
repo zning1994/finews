@@ -12,7 +12,7 @@ def get_url(url):
 
 
 if __name__ == '__main__':
-    result = get_url("http://183.136.162.242/web/webapi?type=102&count=100&newsid=1")
+    result = get_url("http://183.136.162.242/web/webapi?type=102&count=500&newsid=1")
     result = json.loads(result)['records']
     for i in result:
         # print(i['title'], i['digest'].split("】")[-1], i['id'], i['url_w'], i['showtime'], i['showtime'].split(" ")[0])
