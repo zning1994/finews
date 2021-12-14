@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<row>
+  <div class="col-sm-12">
+    <h1>
+      <i class="far fa-folder-open"></i>&nbsp;{{ page.title }}&nbsp;&nbsp;
+      <span class="badge">{{ site.categories[page.category] | size }}</span>
+    </h1>
+    <ul>
+      {% for post in site.categories[page.category] %}
+      <li>
+        <h5>
+          <span class="text-muted small">{{ post.date | date_to_string }}&nbsp;&nbsp;</span>
+          <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+        </h5>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</row>
