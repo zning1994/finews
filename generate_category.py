@@ -28,11 +28,13 @@ def get_front_matter(path):
 
 def get_categories():
     all_categories = []
+    all_tags = []
 
     for file in glob.glob(os.path.join(POSTS_PATH, '*.md')):
         meta = yaml.load(get_front_matter(file))
         try:
             category = meta['categories']
+            tag = meta['tags']
         except KeyError:
             try:
                 categories = meta['categories']
@@ -61,27 +63,27 @@ def get_categories():
             if category not in all_categories:
                 all_categories.append(category)
 
-    return all_categories
+            if tag not in all_tags:
+                all_tags.append(tag)
 
+    return all_categories, all_tags
 
-def generate_category_pages():
-    categories = get_categories()
+if __name__ == '__main__':
+    categories, tags = get_categories()
     if os.path.exists(CATEGORIES_PATH):
         shutil.rmtree(CATEGORIES_PATH)
 
     os.makedirs(CATEGORIES_PATH)
 
-    for category in categories:
+    for category, tag in zip(categories, tags):
         new_page = CATEGORIES_PATH + '/' + category + '.html'
         with open(new_page, 'w+') as html:
             html.write("---\n")
             html.write("layout: {}\n".format(CATEGORY_LAYOUT))
-            html.write("title: {}\n".format(category.title()))
+            html.write("title: {}\n".format(tag))
             html.write("category: {}\n".format(category))
             html.write("---")
-            print("[INFO] Created page: " + new_page)
+            # print("[INFO] Created page: " + new_page)
     print("[INFO] Succeed! {} category-pages created.\n"
           .format(len(categories)))
 
-if __name__ == '__main__':
-    generate_category_pages()
