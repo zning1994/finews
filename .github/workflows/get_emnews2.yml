@@ -26,13 +26,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Doing fetch and convert
-      run: python get_emnews.py
-
-    - name: Doing fetch and convert 2
-      run: python get_emnews_2.py
-
-    - name: Doing fetch and convert 3
-      run: python get_market_news.py
+      run: python get_news_with__threads.py
       
     - name: Commit files
       run: |
