@@ -16,3 +16,6 @@ plugins:
 
 feed:
   posts_limit: 1000
+
+exclude:
+  - "old_postS"
