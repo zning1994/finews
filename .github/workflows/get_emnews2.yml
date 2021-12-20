@@ -2,7 +2,7 @@ name: 'get_emnews2'
 
 on:
   schedule:
-    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   build:
