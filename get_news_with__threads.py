@@ -3,8 +3,27 @@ import json
 import requests
 import math
 import time, threading
+import os
+import shutil
+from datetime import datetime, timedelta
 
 from xpinyin import Pinyin
+
+def make_calender():
+    time_list = []
+    d = datetime.today()
+    delta = timedelta(days=-1)
+    time_list.append(d.strftime("%Y-%m-%d"))
+    time_list.append((d+delta).strftime("%Y-%m-%d"))
+    time_list.append((d+delta+delta).strftime("%Y-%m-%d"))
+    print(time_list)
+    return time_list
+
+def mv_files(time_list):
+    file_list = os.listdir('./_posts/')
+    for i in file_list:
+        if i[0:10] not in time_list:
+            shutil.move(os.path.join("./_posts/",i),"./old_post/")
 
 def get_url(url):
     headers = {
@@ -70,6 +89,7 @@ tags: """+i['medianame']+"""新闻
 """+contents.replace("　　","")+"\n\n<http://finews.zning.xyz/html_News/NewsShare.html?infoCode="+i['infoCode']+">\n\n[返回"+i['medianame']+"新闻](//finews.withounder.com/category/"+pinyin+".html)｜[返回首页](//finews.withounder.com/)")
 
 if __name__ == '__main__':
+    mv_files(make_calender())
     for i in range(0,5):
         t1 = threading.Thread(target=get_esnews, name='get_esnews')
         t1.start()
