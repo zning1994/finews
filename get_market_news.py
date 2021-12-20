@@ -18,7 +18,7 @@ if __name__ == '__main__':
         result = json.loads(result)['record']
         for i in result:
             pinyin = p.get_pinyin(i['medianame']).replace("-","")
-            contents = json.loads(get_url("http://choicewzp1.eastmoney.com/NewsData/GetNewsText.do?id="+i['infoCode']))['text']
+            contents = json.loads(get_url("http://finews.zning.xyz/NewsData/GetNewsText.do?id="+i['infoCode']))['text']
             with open("./_posts/"+str(i['datetime'].split(" ")[0])+"-"+str(i['infoCode'])+".md", "w", encoding="utf-8") as f:
                 f.write("""---
 layout: post
@@ -27,6 +27,6 @@ date: """+i['datetime']+""" +0800
 categories: """+pinyin+"""
 tags: """+i['medianame']+"""新闻
 ---
-"""+contents+"\n\n<http://choicewzp1.eastmoney.com/html_News/NewsShare.html?infoCode="+i['infoCode']+">\n\n[返回"+i['medianame']+"新闻](//finews.withounder.com/"+pinyin+"/)｜[返回首页](//finews.withounder.com/)")
+"""+contents+"\n\n<http://finews.zning.xyz/html_News/NewsShare.html?infoCode="+i['infoCode']+">\n\n[返回"+i['medianame']+"新闻](//finews.withounder.com/"+pinyin+"/)｜[返回首页](//finews.withounder.com/)")
 
 
