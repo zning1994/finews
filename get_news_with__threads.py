@@ -23,7 +23,8 @@ def mv_files(time_list):
     file_list = os.listdir('./_posts/')
     for i in file_list:
         if i[0:10] not in time_list and i != "2021-12-01-init.md":
-            shutil.move(os.path.join("./_posts/",i),"./old_post/")
+            shutil.copy(os.path.join("./_posts/",i),"./old_post/")
+            os.remove(os.path.join("./_posts/",i))
 
 def get_url(url):
     headers = {
