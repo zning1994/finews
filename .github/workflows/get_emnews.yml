@@ -40,7 +40,7 @@ jobs:
         git config --local user.name "ZNing"
         git add .
         git commit -m "提交更新 $(date "+%Y-%m-%d %H:%M:%S")"
-        git pull origin main
+        git pull --ff-only
 
     - name: Push changes
       uses: ad-m/github-push-action@master
