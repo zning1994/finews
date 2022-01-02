@@ -91,7 +91,7 @@ tags: """+i['medianame']+"""新闻
 
 if __name__ == '__main__':
     mv_files(make_calender())
-    for i in range(0,5):
+    for i in range(0,3):
         t1 = threading.Thread(target=get_esnews, name='get_esnews')
         t1.start()
         t2 = threading.Thread(target=get_esnews_2, name='get_esnews_2')
